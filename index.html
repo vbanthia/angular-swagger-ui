@@ -2,14 +2,14 @@
 <html class="no-js" ng-app="myApp">
   <head>
     <meta charset="utf-8">
-    <title>angular-swagger-ui sample</title>
+    <title>Smartphone Test Farm API</title>
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/swagger-ui.min.css">
   </head>
   <body>
     <div ng-controller="MyCtrl" class="container" style="margin-bottom:100px">
-        <h1>angular-swagger-ui sample</h1>
+        <h1>Smartphone Test Farm API</h1>
         <form name="urlForm" ng-submit="urlForm.$valid&&(swaggerUrl=url)" class="form-inline">
             <input type="url" placeholder="swagger URL" class="form-control" id="url" name="url" ng-model="url" required style="width:400px">
             <button type="submit" class="btn btn-primary" ng-disabled="isLoading">explore</button>
@@ -32,7 +32,7 @@
             .controller('MyCtrl', function($scope){
                 // init form
                 $scope.isLoading = false;
-                $scope.url = $scope.swaggerUrl = 'http://petstore.swagger.io/v2/swagger.json';
+                $scope.url = $scope.swaggerUrl = 'https://raw.githubusercontent.com/openstf/stf/implement-reserve-release/lib/units/api/swagger/api_v1_generated.json';
                 // error management
                 $scope.myErrorHandler = function(data, status){
                     alert('failed to load swagger: '+status+'   '+data);
