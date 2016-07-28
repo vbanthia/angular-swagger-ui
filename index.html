@@ -32,7 +32,7 @@
             .controller('MyCtrl', function($scope){
                 // init form
                 $scope.isLoading = false;
-                $scope.url = $scope.swaggerUrl = 'https://raw.githubusercontent.com/openstf/stf/2.0.0/lib/units/api/swagger/api_v1_generated.json';
+                $scope.url = $scope.swaggerUrl = 'https://raw.githubusercontent.com/openstf/stf/master/lib/units/api/swagger/api_v1_generated.json';
                 // error management
                 $scope.myErrorHandler = function(data, status){
                     alert('failed to load swagger: '+status+'   '+data);
